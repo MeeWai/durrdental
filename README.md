@@ -1,4 +1,24 @@
 # durrdental
+
+To run allure report
+1. Install with npm install --save-dev allure-commandline. Make sure Java version 8 or above installed, and its directory is specified in the JAVA_HOME environment variable.
+2. Install with pip install allure-behave
+3. Generate report with behave -f allure_behave.formatter:AllureFormatter -o <folder_name> .\features\
+4. allure serve <folder_name>
+
 Result
 
-![image](https://github.com/MeeWai/durrdental/assets/38762366/f4077eb1-1e5c-4eb5-a597-3e03a473e4bc)
+Overall result
+
+
+
+Scenario : Login with correct credential to VS Monitor Homepage
+
+
+
+Scenario: Login with incorrect credential to VS Monitor Homepage
+
+
+
+Scenario: Verify the user detail in My user account
+
