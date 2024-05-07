@@ -1,6 +1,4 @@
 # XPath
-from selenium.webdriver.remote.webelement import WebElement
-
 GET_LOGIN_BUTTON_AT_HOMEPAGE = '/html/body/div/div/div/main/div/div/div/div/div[1]/div/button/span/span'
 
 GET_LOGIN_LABEL_AT_LOGIN_PAGE = '//h1[contains(text(),\'Log-in\')]'
