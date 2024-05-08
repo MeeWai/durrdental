@@ -33,6 +33,6 @@ def i_validate_that_i_navigate_to_my_user_account(context, expected_url):
 
     if actual_url != expected_url:
         raise AssertionError(f"Did not navigate to expected url: {expected_url}, but navigate to: {actual_url}")
-    if not element_dashboard_label.is_displayed():
+    if element_dashboard_label.text != 'Dashboard':
         raise AssertionError(f"Wrong page displayed: {element_dashboard_label.text}, "
                              f"expected page: Dashboard")
