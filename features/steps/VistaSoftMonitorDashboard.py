@@ -54,4 +54,4 @@ def i_verify_name_email_are_correct_in_my_user_account(context, expected_first_n
     elif element_email.get_attribute('value') != expected_email:
         raise AssertionError(
             f'Actual email : {element_email.get_attribute('value')} '
-            f'not equal to expected email : {expected_email.text}')
+            f'not equal to expected email : {expected_email}')
