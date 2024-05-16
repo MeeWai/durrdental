@@ -23,11 +23,12 @@
     
     ``pip install selenium``
     ``pip install behave``
-4. Lastly, freeze the required libraries in **requirements.txt**.
+4. Freeze the required libraries in **requirements.txt**.
 
 **Install allure report**
 1. Install with ```npm install --save-dev allure-commandline```. Make sure Java version 8 or above installed, and its directory is specified in the JAVA_HOME environment variable. 
 2. Install with ```pip install allure-behave```
+3. Freeze the required libraries in **requirements.txt**.
 
 # Run allure report
 1. Generate report with ``behave -f allure_behave.formatter:AllureFormatter -o <report_folder_name> <feature_folder_name>``
