@@ -32,7 +32,7 @@
 
 # Run allure report
 1. Generate report with ``behave -f allure_behave.formatter:AllureFormatter -o <report_folder_name> <feature_folder_name>``
-2. You can open the report on the browser by running ``allure serve <report_folder_name>``
+2. You can view the report on the browser by running ``allure serve <report_folder_name>``
 
 # Run test with Behave command
 1. To run all test cases in feature file, run this command ``behave <feature_folder_name>`` in terminal
