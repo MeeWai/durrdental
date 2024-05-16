@@ -34,7 +34,7 @@
 1. Generate report with ``behave -f allure_behave.formatter:AllureFormatter -o <report_folder_name> <feature_folder_name>``
 2. You can open the report on the browser by running ``allure serve <report_folder_name>``
 
-# Run test in Behave command
+# Run test with Behave command
 1. To run all test cases in feature file, run this command ``behave <feature_folder_name>`` in terminal
 2. To run specified test cases in VistaSoftMonitorDashboard.feature, for example only run the scenario for ``verify the user detail in My user account``, run this command with tag``behave <feature_folder_name> --tags=@VerifyTheUserDetailInMyUserAccount``
 
