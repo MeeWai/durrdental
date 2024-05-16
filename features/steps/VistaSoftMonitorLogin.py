@@ -4,15 +4,6 @@ import CommonStep
 import WebElements
 
 
-@given('I verify that I successfully login to VS Monitor with "{expected_email}"')
-def i_verify_that_i_successfully_login_to_vs_monitor(context, expected_email):
-    element_email = CommonStep.presence_element_located_find_by_xpath(context, WebElements.GET_EMAIL_NAVIGATION_MENU)
-    print(element_email.text)
-
-    if element_email.text != expected_email:
-        raise AssertionError(f"Did not get the expected user email: {expected_email} but get {element_email.text}")
-
-
 @then('I verify that the "{error_message}" should be displayed')
 def i_verify_that_the_error_message_should_be_displayed(context, error_message):
     element_error_message = CommonStep.presence_element_located_find_by_id(context, WebElements.GET_LOGIN_ERROR_MESSAGE)
