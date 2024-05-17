@@ -8,9 +8,21 @@ import CommonStep
 
 @then('I click on My user account on the user menu in dashboard')
 def i_click_on_my_user_account_on_user_menu(context):
-    element_user_navigation_menu = CommonStep.visibility_element_located_find_by_xpath(context,
-                                                                                       WebElements.GET_USER_NAVIGATION_MENU)
-    element_user_navigation_menu.click()
+    # when is in mobile screen size
+    if CommonStep.get_mobile_screen_size(context):
+        element_open_sidebar = CommonStep.visibility_element_located_find_by_xpath(context,
+                                                                                   WebElements.GET_OPEN_SIDEBAR)
+        element_open_sidebar.click()
+
+        element_user_navigation_menu_mobile = CommonStep.visibility_element_located_find_by_xpath(context,
+                                                                                                  WebElements.GET_USER_NAVIGATION_MENU_MOBILE)
+        element_user_navigation_menu_mobile.click()
+
+    # when is in desktop screen size
+    else:
+        element_user_navigation_menu_desktop = CommonStep.visibility_element_located_find_by_xpath(context,
+                                                                                                   WebElements.GET_USER_NAVIGATION_MENU_DESKTOP)
+        element_user_navigation_menu_desktop.click()
 
     element_user_account = CommonStep.visibility_element_located_find_by_id(context, WebElements.GET_USER_PROFILE)
     element_user_account.click()
@@ -47,10 +59,12 @@ def i_verify_name_email_are_correct_in_my_user_account(context, expected_first_n
         raise AssertionError(
             f'Actual first name : {element_first_name.get_attribute('value')} '
             f'not equal to expected first name : {expected_first_name}')
+
     elif element_last_name.get_attribute('value') != expected_last_name:
         raise AssertionError(
             f'Actual last name : {element_last_name.get_attribute('value')} '
             f'not equal to expected first name : {expected_last_name}')
+
     elif element_email.get_attribute('value') != expected_email:
         raise AssertionError(
             f'Actual email : {element_email.get_attribute('value')} '

@@ -57,6 +57,10 @@ def get_element_in_login_page_is_displayed(element_login_label, element_password
     print("element_login_button : ", element_login_button.is_displayed())
 
 
+def get_mobile_screen_size(context):
+    return context.driver.get_window_size().get("width") < 1024
+
+
 def presence_element_located_find_by_xpath(context, web_element):
     return WebDriverWait(context.driver, TIMEOUT).until(EC.presence_of_element_located((By.XPATH, web_element)))
 
